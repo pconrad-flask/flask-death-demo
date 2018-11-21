@@ -56,3 +56,14 @@ With simplified data in hand, we can now start talking about sorting.
 
 The directory `sort` has some Python code for sorting the simplfied data in various ways.
 
+We can also do interesting things with list comprehensions such as:
+
+```
+>>> alaska_1999 = [x for x in d if x['year']=='1999' and x['state']=='Alaska']
+>>> len(alaska_1999)
+11
+>>> cal_1999 = [x for x in d if x['year']=='1999' and x['state']=='California']
+>>> len(cal_1999)
+11
+>>> 
+```
