@@ -198,7 +198,15 @@ Alabama
 ```
 
 
-It appears t
+
+It appears that the most interesting fields to show lay people would be 8,10,11,12,13 (inclusive:
+* Year (int, 4 digits)
+* Cause Name (string)
+* State (string, full state name)
+* Deaths (int)
+* Age-Adjusted Death Rate (float)
+
+
 
 
 # Raw session with `explore_death.py`
