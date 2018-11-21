@@ -163,6 +163,11 @@ None
 >>> d['data'][0][9]
 Accidents (unintentional injuries) (V01-X59,Y85-Y86)
 ```
+
+This page has a good description of what this "113 Cause Name" means: <http://health.utah.gov/opha/IBIShelp/codes/NCHS113.htm>.  The short version is that there is a general agreement on terminology for 113 specific leading causes of death.
+
+
+
 ##  Cause Name ( 10 )
 ```
 >>> d['meta']['view']['columns'][10]
@@ -193,7 +198,7 @@ Alabama
 ```
 
 
-
+It appears t
 
 
 # Raw session with `explore_death.py`
