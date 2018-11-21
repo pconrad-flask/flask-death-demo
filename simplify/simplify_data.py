@@ -18,4 +18,4 @@ for item in d['data']:
     new_data.append(row)
 
 with open('../data/compact_death.json', 'w') as outfile:
-    json.dump(new_data, outfile)
+    json.dump(new_data, outfile, sort_keys=True, indent=2)
