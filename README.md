@@ -49,3 +49,10 @@ In our new `deaths_compact.json` that row would simply be:
 So, we'd have a much easier data structure to work with.
 
 That code is in the directory `simplify`
+
+With simplified data in hand, we can now start talking about sorting.
+
+# Sorting the data
+
+The directory `sort` has some Python code for sorting the simplfied data in various ways.
+
