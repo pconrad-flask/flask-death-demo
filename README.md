@@ -20,4 +20,31 @@ After exploring the data, we learned that:
    10296
    >>> 
    ```   
-* The five most interesting fields in the data are:
+* The five most interesting fields in the data are: 8,10,11,12,13 (inclusive:
+   * Year (int, 4 digits)
+   * Cause Name (string)
+   * State (string, full state name)
+   * Deaths (int)
+   * Age-Adjusted Death Rate (float)
+   
+So, the next step might be to write a short program that converts the raw deaths.json file into a compact_deaths.json
+that has only the data that we think will be useful in the webapp.
+
+That file might have the form of of a simple list of dictionaries.  Where `d['data'][0]` looked like this:
+
+```
+>>> d['data'][0]
+[15029, '0E3080FB-5EF8-4BEF-834E-54B52DB8DFF3', 15029, 1534786069, '1099577', 1534786069, '1099577', None, '2016', 'Accidents (unintentional injuries) (V01-X59,Y85-Y86)', 'Unintentional injuries', 'Alabama', '2755', '55.5']
+>>> 
+```
+
+In our new `deaths_compact.json` that row would simply be:
+
+```
+>>> cd[0]
+{'year':'2016', 'cause':'Unintentional injuries', 'state':'Alabama', 'deaths':'2755', 'rate':'55.5'}
+>>> 
+
+So, we'd have a much easier data structure to work with.
+
+That code is in the directory `simplify`
