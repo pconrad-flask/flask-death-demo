@@ -44,6 +44,7 @@ In our new `deaths_compact.json` that row would simply be:
 >>> cd[0]
 {'year':'2016', 'cause':'Unintentional injuries', 'state':'Alabama', 'deaths':'2755', 'rate':'55.5'}
 >>> 
+```
 
 So, we'd have a much easier data structure to work with.
 
