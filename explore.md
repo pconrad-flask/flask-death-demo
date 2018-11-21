@@ -36,6 +36,42 @@ hypothesis that each of the items in that list is a description of one of the co
 
 So, looking deeper into `d['meta']['view']['columns']` we can start to decode these mysterious 14 items from `d['data'][0]`
 
+Here, we can pull our the names of the 14 columns:
+
+```
+>>> for x in d['meta']['view']['columns']:
+...    print (x['name'])
+... 
+sid
+id
+position
+created_at
+created_meta
+updated_at
+updated_meta
+meta
+Year
+113 Cause Name
+Cause Name
+State
+Deaths
+Age-adjusted Death Rate
+```
+
+We can use a so-called "list comprehension" (a feature of Python) to get these in a list:
+
+```
+>>> column_names = [x['name'] for x in  d['meta']['view']['columns']]
+>>> column_names
+['sid', 'id', 'position', 'created_at', 'created_meta', 'updated_at', 'updated_meta', 'meta', 'Year', '113 Cause Name', 'Cause Name', 'State', 'Deaths', 'Age-adjusted Death Rate']
+>>> type(column_names)
+<class 'list'>
+>>> len(column_names)
+14
+>>> 
+```
+
+# Raw session with `explore_death.py`
 
 
 
