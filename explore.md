@@ -71,6 +71,131 @@ We can use a so-called "list comprehension" (a feature of Python) to get these i
 >>> 
 ```
 
+# Let's look at what the metadata can tell us about each of the 14 fields (0..13)
+
+## sid (0)
+
+```
+>>> d['meta']['view']['columns'][0]
+{'id': -1, 'name': 'sid', 'dataTypeName': 'meta_data', 'fieldName': ':sid', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][0]
+15029
+>>> 
+```
+
+## id (1)
+
+```
+>>> d['meta']['view']['columns'][1]
+{'id': -1, 'name': 'id', 'dataTypeName': 'meta_data', 'fieldName': ':id', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][1]
+'0E3080FB-5EF8-4BEF-834E-54B52DB8DFF3'
+>>> 
+```
+
+## position (2)
+
+```
+>>> d['meta']['view']['columns'][2]
+{'id': -1, 'name': 'position', 'dataTypeName': 'meta_data', 'fieldName': ':position', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][2]
+15029
+>>> 
+```
+
+## created_at (3)
+
+```
+>>> d['meta']['view']['columns'][3]
+{'id': -1, 'name': 'created_at', 'dataTypeName': 'meta_data', 'fieldName': ':created_at', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][3]
+1534786069
+>>> 
+
+```
+
+
+
+
+## created_meta (4)
+
+```
+>>> d['meta']['view']['columns'][4]
+{'id': -1, 'name': 'created_meta', 'dataTypeName': 'meta_data', 'fieldName': ':created_meta', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][4]
+'1099577'
+>>> 
+```
+
+
+##  updated_at ( 5 )
+```
+>>> d['meta']['view']['columns'][5]
+{'id': -1, 'name': 'updated_at', 'dataTypeName': 'meta_data', 'fieldName': ':updated_at', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][5]
+1534786069
+```
+##  updated_meta ( 6 )
+```
+>>> d['meta']['view']['columns'][6]
+{'id': -1, 'name': 'updated_meta', 'dataTypeName': 'meta_data', 'fieldName': ':updated_meta', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][6]
+1099577
+```
+##  meta ( 7 )
+```
+>>> d['meta']['view']['columns'][7]
+{'id': -1, 'name': 'meta', 'dataTypeName': 'meta_data', 'fieldName': ':meta', 'position': 0, 'renderTypeName': 'meta_data', 'format': {}, 'flags': ['hidden']}
+>>> d['data'][0][7]
+None
+```
+##  Year ( 8 )
+```
+>>> d['meta']['view']['columns'][8]
+{'id': 317117533, 'name': 'Year', 'dataTypeName': 'number', 'description': '', 'fieldName': 'year', 'position': 1, 'renderTypeName': 'number', 'tableColumnId': 33023980, 'width': 148, 'cachedContents': {'largest': '2016', 'non_null': 10296, 'average': '2007.5', 'null': 0, 'top': [{'item': '2016', 'count': 20}, {'item': '2015', 'count': 19}, {'item': '2014', 'count': 18}, {'item': '2013', 'count': 17}, {'item': '2012', 'count': 16}, {'item': '2011', 'count': 15}, {'item': '2010', 'count': 14}, {'item': '2009', 'count': 13}, {'item': '2008', 'count': 12}, {'item': '2007', 'count': 11}, {'item': '2006', 'count': 10}, {'item': '2005', 'count': 9}, {'item': '2004', 'count': 8}, {'item': '2003', 'count': 7}, {'item': '2002', 'count': 6}, {'item': '2001', 'count': 5}, {'item': '2000', 'count': 4}, {'item': '1999', 'count': 3}], 'smallest': '1999', 'sum': '20669220'}, 'format': {'precisionStyle': 'standard', 'noCommas': 'true', 'align': 'right'}}
+>>> d['data'][0][8]
+2016
+```
+##  113 Cause Name ( 9 )
+```
+>>> d['meta']['view']['columns'][9]
+{'id': 317117534, 'name': '113 Cause Name', 'dataTypeName': 'text', 'description': '', 'fieldName': '_113_cause_name', 'position': 2, 'renderTypeName': 'text', 'tableColumnId': 33023981, 'width': 268, 'cachedContents': {'largest': 'Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)', 'non_null': 10296, 'null': 0, 'top': [{'item': 'Accidents (unintentional injuries) (V01-X59,Y85-Y86)', 'count': 20}, {'item': 'All Causes', 'count': 19}, {'item': "Alzheimer's disease (G30)", 'count': 18}, {'item': 'Malignant neoplasms (C00-C97)', 'count': 17}, {'item': 'Chronic lower respiratory diseases (J40-J47)', 'count': 16}, {'item': 'Diabetes mellitus (E10-E14)', 'count': 15}, {'item': 'Diseases of heart (I00-I09,I11,I13,I20-I51)', 'count': 14}, {'item': 'Influenza and pneumonia (J09-J18)', 'count': 13}, {'item': 'Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)', 'count': 12}, {'item': 'Cerebrovascular diseases (I60-I69)', 'count': 11}, {'item': 'Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)', 'count': 10}], 'smallest': 'Accidents (unintentional injuries) (V01-X59,Y85-Y86)'}, 'format': {'displayStyle': 'plain', 'align': 'left'}}
+>>> d['data'][0][9]
+Accidents (unintentional injuries) (V01-X59,Y85-Y86)
+```
+##  Cause Name ( 10 )
+```
+>>> d['meta']['view']['columns'][10]
+{'id': 317117535, 'name': 'Cause Name', 'dataTypeName': 'text', 'description': '', 'fieldName': 'cause_name', 'position': 3, 'renderTypeName': 'text', 'tableColumnId': 33023982, 'width': 220, 'cachedContents': {'largest': 'Unintentional injuries', 'non_null': 10296, 'null': 0, 'top': [{'item': 'Unintentional injuries', 'count': 20}, {'item': 'All causes', 'count': 19}, {'item': "Alzheimer's disease", 'count': 18}, {'item': 'Cancer', 'count': 17}, {'item': 'CLRD', 'count': 16}, {'item': 'Diabetes', 'count': 15}, {'item': 'Heart disease', 'count': 14}, {'item': 'Influenza and pneumonia', 'count': 13}, {'item': 'Kidney disease', 'count': 12}, {'item': 'Stroke', 'count': 11}, {'item': 'Suicide', 'count': 10}], 'smallest': 'All causes'}, 'format': {'displayStyle': 'plain', 'align': 'left'}}
+>>> d['data'][0][10]
+Unintentional injuries
+```
+##  State ( 11 )
+```
+>>> d['meta']['view']['columns'][11]
+{'id': 317117536, 'name': 'State', 'dataTypeName': 'text', 'description': '', 'fieldName': 'state', 'position': 4, 'renderTypeName': 'text', 'tableColumnId': 33023983, 'width': 160, 'cachedContents': {'largest': 'Wyoming', 'non_null': 10296, 'null': 0, 'top': [{'item': 'Illinois', 'count': 20}, {'item': 'Indiana', 'count': 19}, {'item': 'Iowa', 'count': 18}, {'item': 'Kansas', 'count': 17}, {'item': 'Kentucky', 'count': 16}, {'item': 'Louisiana', 'count': 15}, {'item': 'Maine', 'count': 14}, {'item': 'Maryland', 'count': 13}, {'item': 'Massachusetts', 'count': 12}, {'item': 'Michigan', 'count': 11}, {'item': 'Minnesota', 'count': 10}, {'item': 'Mississippi', 'count': 9}, {'item': 'Missouri', 'count': 8}, {'item': 'Montana', 'count': 7}, {'item': 'Nebraska', 'count': 6}, {'item': 'Nevada', 'count': 5}, {'item': 'New Hampshire', 'count': 4}, {'item': 'New Jersey', 'count': 3}, {'item': 'New Mexico', 'count': 2}, {'item': 'New York', 'count': 1}], 'smallest': 'Alabama'}, 'format': {'displayStyle': 'plain', 'align': 'left'}}
+>>> d['data'][0][11]
+Alabama
+```
+##  Deaths ( 12 )
+```
+>>> d['meta']['view']['columns'][12]
+{'id': 317117537, 'name': 'Deaths', 'dataTypeName': 'number', 'description': '', 'fieldName': 'deaths', 'position': 5, 'renderTypeName': 'number', 'tableColumnId': 33023984, 'width': 172, 'cachedContents': {'largest': '2712630', 'non_null': 10296, 'average': '15326.67667055167', 'null': 0, 'top': [{'item': '299', 'count': 20}, {'item': '289', 'count': 19}, {'item': '272', 'count': 18}, {'item': '245', 'count': 17}, {'item': '258', 'count': 16}], 'smallest': '21', 'sum': '157803463'}, 'format': {'precisionStyle': 'standard', 'noCommas': 'false', 'align': 'right'}}
+>>> d['data'][0][12]
+2755
+```
+##  Age-adjusted Death Rate ( 13 )
+```
+>>> d['meta']['view']['columns'][13]
+{'id': 317117538, 'name': 'Age-adjusted Death Rate', 'dataTypeName': 'number', 'description': '', 'fieldName': 'aadr', 'position': 6, 'renderTypeName': 'number', 'tableColumnId': 33023985, 'width': 148, 'cachedContents': {'largest': '1087.3', 'non_null': 10296, 'average': '128.0264277389277', 'null': 0, 'top': [{'item': '40.4', 'count': 20}, {'item': '35.2', 'count': 19}, {'item': '44.7', 'count': 18}, {'item': '42.8', 'count': 17}, {'item': '40.8', 'count': 16}], 'smallest': '2.6', 'sum': '1318160.1'}, 'format': {'precisionStyle': 'standard', 'noCommas': 'false', 'precision': '2', 'align': 'right'}}
+>>> d['data'][0][13]
+55.5
+```
+
+
+
+
+
 # Raw session with `explore_death.py`
 
 
