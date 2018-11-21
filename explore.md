@@ -1,3 +1,30 @@
+A few things we can tell from session below.
+
+* At the top level, the data (which we are accessing through variable `d`) has two keys: `meta` and `data`
+* `d['data']` is a list of 10,296 rows, each of which is also a list.   Each of the rows is a list of 14 items.
+* Here is a sample item from data, i.e. `d['data'][0]`
+   ```
+   [15029,
+    '0E3080FB-5EF8-4BEF-834E-54B52DB8DFF3',
+    15029,
+    1534786069,
+    '1099577',
+    1534786069,
+    '1099577',
+    None,
+    '2016',
+    'Accidents (unintentional injuries) (V01-X59,Y85-Y86)',
+    'Unintentional injuries',
+    'Alabama',
+    '2755',
+    '55.5']
+   ```
+
+The next step is to try to use the information in `d['meta']` to make sense of the 14 fields in each of the rows 
+of the `d['data']` array.
+
+
+
 
 ```
 169-231-87-146:explore pconrad$ python3 -i explore_death.py 
@@ -393,4 +420,69 @@
  'viewLastModified': 1534786063,
  'viewType': 'tabular'}
 >>> 
+
+>>> type(d['data'])
+<class 'list'>
+>>> len(type(d['data']))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: object of type 'type' has no len()
+>>> len(d['data'])
+10296
+>>> type(d['data'][0])
+<class 'list'>
+>>> len(d['data'][0]))
+  File "<stdin>", line 1
+    len(d['data'][0]))
+                     ^
+SyntaxError: invalid syntax
+>>> len(d['data'][0])
+14
+>>> pprint.pprint(d['data'][0])
+[15029,
+ '0E3080FB-5EF8-4BEF-834E-54B52DB8DFF3',
+ 15029,
+ 1534786069,
+ '1099577',
+ 1534786069,
+ '1099577',
+ None,
+ '2016',
+ 'Accidents (unintentional injuries) (V01-X59,Y85-Y86)',
+ 'Unintentional injuries',
+ 'Alabama',
+ '2755',
+ '55.5']
+>>> pprint.pprint(d['data'][1])
+[15030,
+ '5A6F1799-07FB-4C97-B6FC-A8BB792C5137',
+ 15030,
+ 1534786069,
+ '1099577',
+ 1534786069,
+ '1099577',
+ None,
+ '2016',
+ 'Accidents (unintentional injuries) (V01-X59,Y85-Y86)',
+ 'Unintentional injuries',
+ 'Alaska',
+ '439',
+ '63.1']
+>>> pprint.pprint(d['data'][2])
+[15031,
+ '50D8F132-BD59-4267-A3F9-7179EF5C2628',
+ 15031,
+ 1534786069,
+ '1099577',
+ 1534786069,
+ '1099577',
+ None,
+ '2016',
+ 'Accidents (unintentional injuries) (V01-X59,Y85-Y86)',
+ 'Unintentional injuries',
+ 'Arizona',
+ '4010',
+ '54.2']
+>>> 
 ```
+
