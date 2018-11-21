@@ -12,3 +12,12 @@ you'll get a Python prompt where the variable `d` contains the entire contents o
 
 The file [explore.md](explore.md) contains a sample session 
 
+After exploring the data, we learned that:
+* There are 10296 rows of data
+
+   ```
+   >>> len(d['data'])
+   10296
+   >>> 
+   ```   
+* The five most interesting fields in the data are:
