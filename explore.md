@@ -23,6 +23,19 @@ A few things we can tell from session below.
 The next step is to try to use the information in `d['meta']` to make sense of the 14 fields in each of the rows 
 of the `d['data']` array.
 
+We note that the length of `d['meta']['view']['columns']` is exactly 14, which leads us to the not unreasonable
+hypothesis that each of the items in that list is a description of one of the columns:
+
+```
+>>> type(d['meta']['view']['columns'])
+<class 'list'>
+>>> len(d['meta']['view']['columns'])
+14
+>>> 
+```
+
+So, looking deeper into `d['meta']['view']['columns']` we can start to decode these mysterious 14 items from `d['data'][0]`
+
 
 
 
